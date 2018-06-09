@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="pageTitlePrimaryDark">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="buttonPrimary">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorButtonText</item>
+    </style>
+
+    <style name="copyright">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="checkboxLabel">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="primaryLabelLink">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorLink</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="secondaryLinkLabel">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorLink</item>
+    </style>
+
+    <style name="errorAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorError</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="primaryLabel">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="secondaryLabel">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="SmallLabel">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:gravity">left</item>
+    </style>
+</resources>

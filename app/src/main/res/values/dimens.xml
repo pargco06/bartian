@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="smallPadding">5dp</dimen>
+    <dimen name="mediumPadding">10dp</dimen>
+    <dimen name="highPadding">15dp</dimen>
+    <dimen name="xhighPadding">20dp</dimen>
+</resources>

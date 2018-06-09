@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp">
+        <LinearLayout
+            android:id="@+id/stationContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_weight="0.9"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/originContainer"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:id="@+id/origin_label"
+                        style="@style/secondaryLabel"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Origin"/>
+
+                    <Spinner
+                        android:id="@+id/origin_spinner"
+                        android:layout_toRightOf="@id/origin_label"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/origin_label" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/destinationContainer"
+                    android:layout_below="@id/originContainer"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/destination_label"
+                        style="@style/secondaryLabel"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Destination" />
+
+                    <Spinner
+                        android:id="@+id/destination_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@id/destination_label"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/swapStation"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/ic_baseline_swap_vert"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/nextTrainDetailsContainer"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stationContainer"
+            android:orientation="vertical">
+            <!--<LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">-->
+                <LinearLayout
+                    android:id="@+id/nextTrainContainer"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/secondaryLabel"
+                        android:layout_gravity="center"
+                        android:text="Next train at"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_gravity="center_horizontal|left"
+                        android:gravity="left"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/nextTrainTime"
+                        style="@style/primaryLabelLink"
+                        tools:text="Next train at"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/platform"
+                            tools:text="Platform 2, 9 cars"
+                            style="@style/SmallLabel"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:visibility="gone"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/bike"
+                            android:layout_gravity="left"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            app:srcCompat="@drawable/ic_baseline_bike"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/transferAtContainer"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/secondaryLabel"
+                        android:text="Transfer at"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        tools:text="Transfer at"
+                        android:id="@+id/transferAt"
+                        style="@style/primaryLabelLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            <com.parg.bartian.ui.custom.VadaProgressBar
+                android:id="@+id/next_train_pgbar"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/xhighPadding"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:vada_text_color = "#000000"
+                app:vada_text_size="20sp"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/getSchedule"
+                android:textColor="#FFFFFF"
+                android:background="@color/button_default"
+                android:layout_marginTop="10dp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                style="?attr/borderlessButtonStyle"
+                android:text="Next Train"/>
+            <TextView
+                android:layout_above="@id/getSchedule"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/getFare"
+                android:visibility="gone"
+                style="@style/secondaryLinkLabel"
+                android:layout_marginTop="10dp"
+                android:text="Get Fare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/advisory"
+                android:layout_above="@id/getSchedule"
+                android:visibility="gone"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/getFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_baseline_warning"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
